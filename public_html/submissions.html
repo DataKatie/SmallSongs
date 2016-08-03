@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+<title>Small Songs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "description" content = "Biographies of poets who submitted their work to small songs">
+        <meta name ="keywords" content ="poetry, haiku, tanaka, journal, short poetry">
+        <link rel="shortcut icon" href ="favicon.ico">
+        <link rel ="stylesheet" href ="smallsongscss.css" type ="text/css">
+       </head>
+    <body>
+          <header>
+            <h1> Small Songs </h1>
+        </header>
+        <nav>
+            <ul>
+                <li id = "home"> <a href ="index.html"> Home </a> </li>
+                <li> <a> Issues </a>
+                    <ul>
+                        <li> <a href ="current.html"> Current Issue </a> </li>  
+                        <li><a href ="past.html"> Past Issues      </a> </li>
+                    </ul> </li>
+                <li><a href ="Songwriting.html"> Song Writing </a> </li> 
+                <li> <a href ="gallery.html"> Gallery   </a> </li>
+                <li><a href ="poet_biographies.html"> Poet Biographies     </a> </li>
+                <li><a href ="submissions.html"> Submissions      </a> </li>
+            </ul>
+        </nav>
+        <main>
+        <h1 id = "submithead"> Submission Form </h1>
+        <p id = "submitp"> Are you ready to submit your poem? Please fill out the form below 
+            and press 'submit.' Do you have questions? If so, please 
+            <a href ="mailto: katie.m.sullivan@gmail.com"> contact us.</a>
+        <fieldset id = "form">
+            <form name ="submission" action ="submitted.html" method ="get"
+                  enctype = "multipart/form-data" onsubmit = "return validate()">
+                <label for ="name" > Name </label>
+                <input type ="text" name ="name" id = 'name' size="50" />  
+                <span style= "color: red;" id ="nameErr"> </span><br>
+               <label for ="email" > Email Address</label>
+                <input type ="email" name ="email" placeholder =
+                     "yourname@email.com" size="50" id ="email" /> 
+                <span style= "color: red;" id ="emailErr"> </span><br>
+                <label for ="title"> Poem Title </label>
+               <input type ="text" name ="title" id = 'title' size="50"/> 
+                <span style= "color: red;" id ="titleErr"> </span><br>
+                <label for ="poemtype"> Type of Poem: </label> 
+                <input type ="radio" name ="poemtype" id= "poemtype1" value ="haiku">Haiku
+                <input type ="radio" name ="poemtype" id= "poemtype2" value ="tanka">Tanka
+                <input type ="radio" name ="poemtype" id= "poemtype3" value ="other"> Other 
+                <span style= "color: red;" id ='selectedErr'> </span>
+                <br>
+                <label for ="poem"> </label>
+                Poem (maximum 1000 characters) 
+                <span style= "color: red;" id ='poemErr'> </span> <br>
+                <textarea name ="poem" id = 'poem' cols ="100" rows ="10" 
+                   maxlength = "1000" > </textarea> 
+                <br> 
+                <label for ="bio"> </label> 
+                Enter a poet biography (optional, maximum 1000 characters) <br>
+                <textarea name ="bio" id = "bio" cols ="100" rows ="10" maxlength = "1000"> 
+                </textarea><br>
+                Upload your photo: <label for ="fileupload">  </label>
+                <input type ="file" name ="fileupload" 
+                             id ="fileupload" accept="image/jpeg, image/gif, image/png"> 
+                <br> How did you hear about this site? 
+                    Check all that apply. 
+                <span style= "color: red;" id ='checkedErr'> </span>     
+                    <label for = "hearabout">  </label><br>
+                <input type ="checkbox" name ="hearabout" value ="friends/family"
+                       id = "hearabout"> Friends, Family, or Other Humans
+                <input type ="checkbox" name ="hearabout" value ="facebook"
+                       id = "hearabout1"> Facebook
+                 <input type ="checkbox" name ="hearabout" value ="other social media"
+                        id = "hearabout2"> Other Social Media 
+                 <input type ="checkbox" name ="hearabout" value ="internet search"
+                        id = "hearabout3"> Google Search
+                 <input type ="checkbox" name ="hearabout" value ="poetry site"
+                        id = "hearabout4"> Another Poetry Site 
+                 <input type ="checkbox" name ="hearabout" value ="other"
+                        id = "hearabout5"> Other (please specify): 
+                 <input type ="text" name ="other" id = "hearabout6"/>
+                <br>
+                Which country are you from? 
+                <select name ="continent">
+                    <option> Select your country </option>
+                    <script>
+                    var country = ['Canada', 'US', 'China', 'India', 'Indonesia','Brazil', 'Pakistan',
+                    'Nigeria', 'Bangledesh', 'Russia', 'Japan', 'Other'];
+        
+                    function displayList() {
+                    var display = ''    
+                    for( var i = 0; i < country.length; i++) {
+                    display += document.write( "<option value =" + (country[i]) + ">" +
+                    (country[i])+ "</option>");
+                    }
+                    return display;
+                    }
+                    document.write(displayList());
+                </script>
+        
+                </select> <br> 
+                <div id ="submit">
+                <input type ="submit" id = "submitbutton" name ="submit" value ="Submit Your Poem!"
+                       onclick ="validate()"/>
+                <input type ="reset" id = "resetbutton" name ="reset" value ="Reset the form"/>
+                </div>
+            </form>
+        </fieldset>  
+        <script>
+            var imp = function(formElement) {
+                return document.getElementById(formElement)
+            }
+            function validate() {
+            var correct;
+            if (imp('name').value == "") {
+                imp('nameErr').innerHTML = "Name is a required field";
+                correct = false;
+            }
+            if  (imp('title').value == "") {
+                imp('titleErr').innerHTML = "Title is a required field";
+                correct = false;
+            }
+            var isSelected = (imp('poemtype1').checked || imp('poemtype2').checked 
+              ||imp('poemtype3').checked);         
+            if (!isSelected) {
+              imp('selectedErr').innerHTML = "Select your poem type. You can always choose Other!"; 
+              correct = false;
+              } 
+            var trimmedPoem = (imp('poem').value).trim();
+            if  (trimmedPoem == "") {
+                imp('poemErr').innerHTML = "Poem is a required field";
+                correct = false;
+            }
+        
+        
+            var emailPattern = /^([A-Za-z0-9_\.\-\+\%])+\@([A-Za-z0-9._%+-])+\.([A-Za-z]{2,4})/;
+                     
+            if (!emailPattern.test(imp('email').value)) {
+                imp('emailErr').innerHTML = "Enter a valid email address";
+            correct = false;
+            }
+            var isChecked = (imp('hearabout').checked || imp('hearabout1').checked 
+              ||imp('hearabout2').checked|| imp('hearabout3').checked|| 
+              imp('hearabout4').checked || imp('hearabout5').checked);         
+            if (!isChecked) {
+              imp('checkedErr').innerHTML = "Select at least one option"; 
+              correct = false;
+              } 
+              
+            if (correct == false)
+              return false;
+          else 
+              return true;
+            }
+            
+        </script>
+        <footer>
+                      <div id ="nav2" >     
+            <ul>
+                <li> <a href ="index.html"> Home </a> </li>
+                <li> <a href ="current.html"> Current Issue </a> </li>  
+                <li><a href ="past.html"> Past Issues      </a> </li>
+                <li><a href ="Songwriting.html"> Song Writing </a> </li> 
+                <li> <a href ="gallery.html"> Gallery   </a> </li>
+                <li><a href ="poet_biographies.html"> Poet Biographies     </a> </li>
+                <li><a href ="submissions.html"> Submissions      </a> </li>
+            </ul>
+            </div>
+            Copyright &copy; 2015 Small Songs<br>
+            Website design by Katie Sullivan 
+            <a href = " mailto: katie.m.sullivan@gmail.com">Contact me </a>
+        </footer>
+        
+        </main>    
+    </body>      
+</html>

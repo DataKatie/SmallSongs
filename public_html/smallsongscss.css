@@ -1,0 +1,463 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-Sep-2015, 8:26:41 AM
+    Author     : Katie
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-Sep-2015, 8:10:40 AM
+    Author     : Katie
+*/
+
+body
+{   font-family: Garamond serif;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  
+    width: 80%;
+    min-width: 900px;
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:#a4a4d6;
+    
+    
+}
+
+header
+{
+    background-color:#00ffcc;
+    background-image: url(blossoms.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    height: 170px;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-left:20px;
+    margin: 0px;    
+    text-align: center;
+    box-shadow: 10px 10px 10px #666666;
+}
+
+h1 
+{
+    vertical-align: middle;
+}
+
+   
+
+
+main
+{
+    font-family: Garamond,serif;
+    font-size: 1.1em;
+    background-image: url(clouds.jpg);
+    box-shadow: 10px 10px 10px #666666;
+    margin-top: 0;
+}
+
+#song{
+    padding: 70px;
+    float: left;
+}
+
+div.author {
+    font-size: 0.8em;
+    font-style: italic;
+   
+}
+
+#canoe {
+    float: right;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 300px;
+    border: 2px solid white;
+    
+   
+    
+}
+nav
+{
+    text-align: center;
+    background-color:#9999ff;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 900px;
+    max-width: 1024px;
+    box-shadow: 10px 10px 10px #666666;
+    
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    margin-left: 150px;
+    margin-bottom: 30px;
+    padding: 10px;
+    z-index: 1;
+    
+    }
+
+nav ul li {
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+         }
+nav a {
+    text-decoration: none;
+    display: block;
+    padding-left: 20px;
+    color: #0000ff;
+}
+nav a:link {color:#0000ff;}
+nav a:visited {color:#990099;}
+nav a:hover { color: #FFFFFF; }
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color:#9999ff;
+    right: -30px;
+    width: 100px;
+    
+   
+}
+nav ul ul li {position: relative;
+             
+              
+}
+
+nav li:hover ul li a { display: block;
+}
+nav li:hover > ul {display: block;
+}
+
+#nav2 {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 900px;
+    max-width: 1024px;
+}
+
+#nav2  ul {
+    list-style: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    
+    
+    }
+
+#nav2 ul li {
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+         }
+#nav2 a {
+    text-decoration: none;
+    display: block;
+    padding-left: 20px;
+    color: #0000ff;
+}
+
+#about{
+    clear: left;
+    clear: right;
+    padding: 50px;
+}
+
+#haiku{
+     padding-left: 50px;
+     padding-right: 50px;
+  
+}
+
+#swamp {
+     float: left;
+    margin-top: 50px;
+   margin-right: 0px;
+    margin-left: 100px;
+    border: 2px solid white;
+}
+
+#storm {
+    clear: left;
+    clear: right;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 150px;
+    padding-top: 120px;
+    padding-bottom: 0px;
+}
+
+#tanka{
+     padding-left: 50px;
+     padding-right: 50px;
+     padding-top: 100px;
+  
+}
+
+#beach {
+    float: right;
+    margin-top: 20px;
+    margin-right: 150px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+}
+
+#sundaydrive {
+    float: left;
+    padding-left: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    text-align: center;
+    
+}
+
+#bios{
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 50px;
+    margin: 0px;
+}
+
+div.biography {
+   margin-top: 10px;
+   margin-bottom: 30px;
+   display: inline-block;
+}
+img.photo {
+    
+    float: left;
+    margin-right: 30px;
+    
+}
+
+p.description{
+    
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+} 
+
+#callforsubmission{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+#submithead {
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#submitp {
+    text-align: center;
+}
+
+#form {
+    
+    line-height: 200%;
+    font-weight: bold;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+}
+input {
+    margin-left: 3em;
+   
+}
+label {
+    float: left;
+    width:  7em;
+    text-align: right;
+    
+}
+#form textarea {
+    clear: left;
+    clear: right;
+    display: block;
+    padding: 20px;
+    margin: 10px;
+}
+
+#submit {
+    font-weight: bold;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+#submitbutton {
+    
+    box-shadow: 2px 2px 2px grey;
+}
+
+#resetbutton {
+    box-shadow: 2px 2px 2px grey;
+}
+
+#submitted {
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 50px;
+    margin: 0px;
+}
+
+footer
+{   clear: left;
+    clear:right;
+    margin-top: 50px;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.8em;
+    padding: 50px;
+}
+
+#gallery
+{
+    background-image: none;
+    background-color: pink;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    
+}
+#gallery img {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#gallery img:hover { 
+cursor: pointer;
+}
+
+#past{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.ui-accordian {
+    margin: 0px;
+    padding: 20px;
+    font-family: Garamond serif;
+}
+
+.ui-accordion-content{
+    background-image: url(clouds.jpg);
+    max-height: 500px;
+    font-size: 0.8em;
+    font-family: Garamond serif;
+}
+
+
+iframe {
+    padding: 20px;
+    margin: 20px;
+}
+
+#songwriting {
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 50px;
+    margin: 0px;
+}
+
+#current {
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 50px;
+    margin: 0px;
+    
+}
+#current h1 {text-align: center;}
+#currentpoems {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+#logo{
+    float: left;
+    padding-right: 20px;
+    position: relative;
+    left: 220px;
+    z-index: 0;
+}
+#content1:hover {
+    color: blue;
+    cursor:pointer;
+}
+#content2:hover {
+    color: blue;
+    cursor:pointer;
+}
+#content3:hover {
+    color: blue;
+    cursor:pointer;
+}
+#content4:hover {
+    color: blue;
+    cursor:pointer;
+}
+#content5:hover {
+    color: blue;
+    cursor:pointer;
+}
+#content6:hover {
+    color: blue;
+    cursor:pointer;
+}
+#past {
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 50px;
+    margin: 0px;
+}

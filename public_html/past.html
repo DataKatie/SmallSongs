@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+<title>Small Songs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "description" content = "Biographies of poets who submitted their work to small songs">
+        <meta name ="keywords" content ="poetry, haiku, tanaka, journal, short poetry">
+        <link rel="shortcut icon" href ="favicon.ico">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel ="stylesheet" href ="smallsongscss.css" type ="text/css">
+        <style>
+            #accordion-resizer {
+            padding: 10px;
+            
+         }
+        </style>
+        <script>
+          $(function() {
+              $( "#accordion" ).accordion({
+              heightStyle: "content"
+            });
+          });
+          $(function() {
+            $( "#accordion-resizer" ).resizable({
+                          
+              resize: function() {
+            $( "#accordion" ).accordion( "refresh" );
+              }
+            });
+          });
+            </script>
+
+        </head>
+    <body>
+          <header>
+            <h1> Small Songs </h1>
+        </header>
+        <nav>
+            <ul>
+                <li id = "home"> <a href ="index.html"> Home </a> </li>
+                <li> <a> Issues </a>
+                    <ul>
+                        <li> <a href ="current.html"> Current Issue </a> </li>  
+                        <li><a href ="past.html"> Past Issues      </a> </li>
+                    </ul> </li>
+                <li><a href ="Songwriting.html"> Song Writing </a> </li> 
+                <li> <a href ="gallery.html"> Gallery   </a> </li>
+                <li><a href ="poet_biographies.html"> Poet Biographies     </a> </li>
+                <li><a href ="submissions.html"> Submissions      </a> </li>
+            </ul>
+        </nav>
+        <main>
+        <div id ="past">    
+            <h1> Past Issues</h1>
+            <p> In time, this page will be devoted to a collection of previous
+            issues of the poetry magazine.</p>
+  
+            
+        </div>
+
+        <footer>
+                      <div id ="nav2" >     
+            <ul>
+                <li> <a href ="index.html"> Home </a> </li>
+                <li> <a href ="current.html"> Current Issue </a> </li>  
+                <li><a href ="past.html"> Past Issues      </a> </li>
+                <li><a href ="Songwriting.html"> Song Writing </a> </li> 
+                <li> <a href ="gallery.html"> Gallery   </a> </li>
+                <li><a href ="poet_biographies.html"> Poet Biographies     </a> </li>
+                <li><a href ="submissions.html"> Submissions      </a> </li>
+            </ul>
+            </div>
+            Copyright &copy; 2015 Small Songs<br>
+            Website design by Katie Sullivan 
+            <a href = " mailto: katie.m.sullivan@gmail.com">Contact me </a>
+        </footer>
+        </main>
